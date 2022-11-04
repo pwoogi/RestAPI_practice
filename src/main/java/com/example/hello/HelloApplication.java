@@ -10,6 +10,8 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+import java.util.Base64;
+
 @SpringBootApplication
 public class HelloApplication {
 
@@ -26,6 +28,7 @@ public class HelloApplication {
 //		String result = encoder.encode(url);
 //		System.out.println(result);
 
+		System.out.println(Base64.getEncoder().encodeToString("chris@gamil.com".getBytes()));
 	}
 
 }

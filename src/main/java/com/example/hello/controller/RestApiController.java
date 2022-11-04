@@ -1,5 +1,6 @@
 package com.example.hello.controller;
 
+import com.example.hello.annotation.Decode;
 import com.example.hello.annotation.Timer;
 import com.example.hello.dto.Student;
 import org.springframework.web.bind.annotation.*;
@@ -31,5 +32,13 @@ public class RestApiController {
 
         Thread.sleep(1000*2);
 
+    }
+
+    @Decode
+    @PutMapping("/putting")
+    public Student put(@RequestBody Student student) {
+        System.out.println("put");
+        System.out.println(student);
+        return student;
     }
 }
